@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    /* Modules */
+    "module": "commonjs", /* Specify what module code is generated. */
+    "esModuleInterop": true, /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+    /* Type Checking */
+    "strict": true, /* Enable all strict type-checking options. */
+    "declaration": true,
+    "declarationDir": "./dist",
+    "outDir": "./dist",
+    // 需要注意的是只有我们引用的是绝对路径的时候才会使用baseUrl去解析文件
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "./src/*.ts"
+  ]
+}
