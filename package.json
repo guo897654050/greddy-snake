@@ -1,15 +1,31 @@
 {
   "name": "greddy-snake",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "greddy-snake",
+  "main": "lib/greddy-snake.umd.js",
+  "module": "lib/greddy-snake.es.js",
+  "files": ["lib"],
+  "export": {
+    ".": {
+      "import": "./lib/greddy-snake.es.js",
+      "require": "./lib/greddy-snake.umd.js"
+    }
+  },
+  "types": "./lib/es/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite --host",
+    "build": "vite build && tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@vitejs/plugin-vue": "2.3.0",
+    "less": "^4.1.3",
     "vite": "2.8"
+  },
+  "dependencies": {
+    "hotkeys-js": "^3.9.4",
+    "vue": "3.2"
   }
 }

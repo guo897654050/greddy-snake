@@ -1,3 +1,6 @@
-export function add(a: string, b: string) {
-  return a + b
-}
+export * from './game';
+export * from './config';
+export * from './map';
+export * from './obstacle';
+export * from './snake';
+export * from './utils';

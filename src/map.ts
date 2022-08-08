@@ -1,9 +1,10 @@
+import { Point } from './utils'
 export class GameMap {
 
   constructor(public readonly width: number, public readonly height: number) { }
 
-  public isCollision(x: number, y: number) {
-    const isCollision = x < 0 || x > this.width || y < 0 || y > this.height;
+  public isCollision(point: Point) {
+    const isCollision = point.x < 0 || point.x >= this.width || point.y < 0 || point.y >= this.height;
     if (isCollision) {
       console.error('撞墙了！')
     }
